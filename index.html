@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
 
-		<title>Moneychecker</title>
+    <title>Moneychecker</title>
 
 </head>
-<body>
-        <img src="Moneychecker-Logo.PNG"  alt="Logo">
-        <section class="uberschrift">
-            <!--<h1>Moneychecker</h1>-->
-        </section>
-        <section class="auswahl1">
-        
-            <select name="waehrung">
-                <option value="Dollar">Dollar</option>
-                <option value="Euro">Euro</option>
-                <option value="Pfund">Pfund</option>
-                <option value="Rubel">Rubel</option>
-                <option value="Yen">Yen</option>
-            </select>
-                
-    
-        </section> 
-        
-        <section class="textfeld1">
-                <input type="Text">
-        </section>
-        
-        <section class="auswahl2">
-            <select name="waehrung">
-                <option value="Dollar">Dollar</option>
-                <option value="Euro">Euro</option>
-                <option value="Pfund">Pfund</option>
-                <option value="Rubel">Rubel</option>
-                <option value="Yen">Yen</option>
-            </select>
-    </section>
-    
-        <section class="textfeld3">
-    <input type="Text">
-        </section><br>
-    
-     <button type="berechnen">Berechnen</button> 
-     <button type="loeschen">Löschen</button> <br>
-    
 
-                <table> <br>
-						<thead>
-							<tr>
-								<th>Währung1</th>
-								<th>Währung2</th>
-								
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td></td>
-								<td></td>
-								
-							<tr>
-							<tr>
-								<td></td>
-								<td></td>
-								
-							<tr>
-							<tr>
-								<td></td>
-								<td></td>
-							<tr>
-							<tr>
-								<td></td>
-								<td></td>
-							<tr>
-						</tbody>
-					</table>
+<body>
+    <img src="Moneychecker-Logo.PNG" alt="Logo">
+    <section class="uberschrift">
+        <!--<h1>Moneychecker</h1>-->
+    </section>
+    <section class="auswahl1">
+
+        <select id="w1" name="waehrung">
+            <option value="Dollar">Dollar</option>
+            <option value="Euro">Euro</option>
+            <option value="Pfund">Pfund</option>
+            <option value="Rubel">Rubel</option>
+            <option value="Yen">Yen</option>
+        </select>
+
+
+    </section>
+
+    <section class="textfeld1">
+        <input id="z1" type="Text">
+    </section>
+
+    <section class="auswahl2">
+        <select id="w2" name="waehrung">
+            <option value="Dollar">Dollar</option>
+            <option value="Euro">Euro</option>
+            <option value="Pfund">Pfund</option>
+            <option value="Rubel">Rubel</option>
+            <option value="Yen">Yen</option>
+        </select>
+    </section>
+
+    <section class="ausgabe">
+        <p>Ergebnis:</p>
+        <p id="ergebnis"></p>
+    </section>
+    <br>
+
+    <button type="berechnen" onclick="calculate()">Berechnen</button>
+    <button type="loeschen" onclick="clearall()">Löschen</button>
+    <br>
+
+
+    <table>
+        <br>
+        <thead>
+            <tr>
+                <th>Währung1</th>
+                <th>Währung2</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+
+                <tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+
+                        <tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <tr>
+        </tbody>
+    </table>
 </body>
-    </html>
+<script language="javascript" type="text/javascript" src="script.js"></script>
+
+</html>
