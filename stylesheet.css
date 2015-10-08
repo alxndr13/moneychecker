@@ -1,0 +1,42 @@
+body{
+background-image:url(hintergrund.png);
+background-attachment:scroll;
+}
+#transparent{
+    height: 600px;
+    width:100%;
+background-color: rgba(255, 255, 255, 0.6);
+}
+#Logo{
+
+margin-left: 500px;
+    margin-top: 10px;
+}
+.auswahl1{
+height: auto;
+float:left;
+    margin-top: 20px;
+}
+.textfeld1{
+margin-top: 20px;
+}
+.auswahl2{
+margin-left: 200px;
+    margin-top: -19px;
+}
+.ausgabe{
+margin-left: 275px;
+    margin-top: -33px;
+}
+#ergebnis{
+margin-left: 80px;
+    margin-top: -33px;
+}
+
+
+button{
+height: 20px;
+    border-radius: 3px;
+    background-color:white;
+}
+
