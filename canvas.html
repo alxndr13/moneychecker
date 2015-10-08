@@ -11,69 +11,62 @@
     <body>
 
         <h1>Test Canvas</h1>
-        <canvas id="myCanvas" width="555" height="300"></canvas>
+        <canvas id="myCanvas" width="400" height="300"></canvas>
         <script>
             var canvas = document.getElementById('myCanvas');
             var context = canvas.getContext('2d');
+
             
-        context.font = "20px Arial";
-        context.fillText("Dollar zu Euro",270,20);     
+        // Var für den rechten Balken    
+           var x = 123; 
     /*
     Linie links!
     */
         context.beginPath();
-        context.moveTo(0, 200);
+        context.moveTo(0, canvas.height);
         context.lineTo(0, 0);
-        context.lineWidth = 4;    
+        context.lineWidth = 1;    
         context.stroke(); 
-            
-    /*
-    Linie unten!
-    */
-        context.beginPath();
-        context.moveTo(400, 200);
-        context.lineTo(0, 200);
-        context.stroke();   
 
-       // add linear gradient
-      var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+      
+            
+
+       //linear gradient hinzufügen
+      var grd = context.createLinearGradient(0, 0,      canvas.width, canvas.height);
       // light blue
       grd.addColorStop(0, '#8ED6FF');   
       // dark blue
       grd.addColorStop(1, '#004CB3');
             
-            
-    /*
-    Linie Rechteck 1!
-    */
-        context.beginPath();
-        context.rect(30, 100, 150, 100);
+       
+    
+   // Linie Rechteck 1!
+    
+        context.rect(25,canvas.height, 150,- 150);
         context.fillStyle = grd;
         context.fill();
-        context.lineWidth = 1;
         context.strokeStyle = 'black';
         context.stroke();
             
-    /*
-    Linie Rechteck 2!
-    */
-        context.beginPath();
-        context.rect(210, 80, 150, 120);
+   // Linie Rechteck 2!
+    
+        context.rect(200,canvas.height, 150,- x);
         context.fillStyle = grd;
         context.fill();
-        context.lineWidth = 1;
         context.strokeStyle = 'black';
-        context.stroke();
-            
-    /*
-    Linie mitte!
+        context.stroke();        
+
+         /*
+    Linie unten!
     */
-        context.beginPath();
-        context.moveTo(400, 100);
-        context.lineTo(0, 100);
+        context.moveTo(canvas.width, canvas.height);
+        context.lineTo(0, canvas.height);
         context.lineWidth = 1;    
-        context.strokeStyle = "grey"; // set line color
         context.stroke();
+
+  
+        
+   
             
         </script>
         
