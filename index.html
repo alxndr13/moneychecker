@@ -5,93 +5,45 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="stylesheet.css">
     <title>Moneychecker</title>
-
 </head>
-
 <body>
-    <section id="transparent"> 
-    <img src="Moneychecker-Logo2.PNG" alt="Logo" id="Logo">
-    <section class="uberschrift">
-        <!--<h1>Moneychecker</h1>-->
-    </section>
-    <section id="box1" class="boxgroesse">
-    <section class="auswahl1">
+    <section id="transparent">
+        <img src="Moneychecker-Logo2.PNG" alt="Logo" id="Logo">
+        <section class="auswahl1">
+            <select id="w1" name="waehrung">
+                <option value="Dollar">Dollar</option>
+                <option value="Euro">Euro</option>
+                <option value="Pfund">Pfund</option>
+                <option value="Rubel">Rubel</option>
+                <option value="Yen">Yen</option>
+            </select>
+        </section>
+        <section class="textfeld1">
+            <input id="z1" type="Text" name="Eingabe in Textfeld" pattern="[0-9]{1-3}[.]{0-1}[0-9]{0-2}" title="Geben Sie eine beliebige Zahl ein" placeholder="1.77" autofocus>
+        </section>
+        <section class="datumbox">
+            Datum:
+            <input type="date" name="Aktienkurs am Tag X">
+            <!-- <input type="submit"> -->
+        </section>
 
-        <select id="w1" name="waehrung">
-            <option value="Dollar">Dollar</option>
-            <option value="Euro">Euro</option>
-            <option value="Pfund">Pfund</option>
-            <option value="Rubel">Rubel</option>
-            <option value="Yen">Yen</option>
-        </select>
-
-
-    </section>
-
-    <section class="textfeld1">
-        <input id="z1" type="Text" name="Eingabe in Textfeld" pattern="[0-9]{1-3}[.]{0-1}[0-9]{0-2}" 
-        title= "Geben Sie eine beliebige Zahl ein" placeholder="1.77" autofocus>
-    </section>
-    <section class="datumbox">
-        Datum:
-        <input type="date" name="Aktienkurs am Tag X">
-        <!-- <input type="submit"> -->
-    </section>
-</section>
-<section id="box2" class="boxgroesse">
-    <section class="auswahl2">
-        <select id="w2" name="waehrung">
-            <option value="Dollar">Dollar</option>
-            <option value="Euro"selected>Euro</option>
-            <option value="Pfund">Pfund</option>
-            <option value="Rubel">Rubel</option>
-            <option value="Yen">Yen</option>
-        </select>
-    </section>
-
-    <section class="ausgabe">
-        <p>Ergebnis:</p>
-        <p id="ergebnis"></p>
-    </section>
-    <br>
-</section>
-<section id="box3" class="boxgroesse">
-    <button type="berechnen" id="berechnen" onclick="calculate()" class="css3button">Berechnen</button>
-    <button type="loeschen" id="loeschen" onclick="clearall()" class="css3button">Löschen</button>
-    <br>
-
-
-    <table>
-        <br>
-        <thead>
-            <tr>
-                <th>Währung1</th>
-                <th>Währung2</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-
-                <tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-
-                        <tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <tr>
-        </tbody>
-    </table>
-     </section>
+        <section class="auswahl2">
+            <select id="w2" name="waehrung">
+                <option value="Dollar">Dollar</option>
+                <option value="Euro" selected>Euro</option>
+                <option value="Pfund">Pfund</option>
+                <option value="Rubel">Rubel</option>
+                <option value="Yen">Yen</option>
+            </select>
+        </section>
+        <section class="ausgabe">
+            <p>Ergebnis:</p>
+            <p id="ergebnis"></p>
+        </section>
+        <section id="box3">
+            <a href="#" class="action-button shadow animate green" onclick="calculate()">Berechnen</a>
+            <a href="#" class="action-button shadow animate green" onclick="clearall()">Löschen</a>
+        </section>
 </body>
 <script language="javascript" type="text/javascript" src="script.js"></script>
 

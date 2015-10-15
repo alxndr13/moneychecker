@@ -1,6 +1,7 @@
 body{
 background-image:url(hintergrund_15.png);
 background-attachment:scroll;
+    text-align: center;
 }
 #transparent{
     height: 600px;
@@ -50,7 +51,7 @@ height: 20px;
         height: 150px;
         font-size: 30pt;
         color: white;
-        opacity: 0.5;
+     //   opacity: 0.5;
         background-color: black
     }
  #box1 {
@@ -69,6 +70,7 @@ height: 20px;
         left: 200px;
         width: 1005px;
         height: 300px;
+        text-align: center;
     }
 #berechnen{
     
@@ -78,34 +80,57 @@ height: 20px;
 margin-left:auto;
 }
 
-button.css3button {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: #ffffff;
-	padding: 10px 20px;
-	background: -moz-linear-gradient(
-		top,
-		#8fae60 0%,
-		#34571c);
-	background: -webkit-gradient(
-		linear, left top, left bottom,
-		from(#8fae60),
-		to(#34571c));
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	border: 1px solid #386917;
-	-moz-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px -1px 0px rgba(255,255,255,0.7);
-	-webkit-box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px -1px 0px rgba(255,255,255,0.7);
-	box-shadow:
-		0px 1px 3px rgba(000,000,000,0.5),
-		inset 0px -1px 0px rgba(255,255,255,0.7);
-	text-shadow:
-		0px -1px 1px rgba(000,000,000,0.2),
-		0px 1px 0px rgba(255,255,255,0.3);
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
 }
+
+.action-button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+}
+
+.red
+{
+	background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+}
+
+.green
+{
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
+}
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+
 
