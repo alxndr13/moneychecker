@@ -88,7 +88,7 @@ function calculate() {
 }
 
 function DollarInEuro(wert) {
-    erg = wert  * 0,87921;
+    erg = wert  * 0.87921;
     document.getElementById("ergebnis").innerHTML = erg;
 }
 function DollarInPfund(wert) {
