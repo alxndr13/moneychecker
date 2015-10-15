@@ -59,6 +59,7 @@ p {
     border: 1px solid #000000;
     margin: 5px;
     margin-top: 150px;
+    
 }
 .animate {
   transition: all 0.1s;
@@ -74,6 +75,8 @@ p {
   font-size: 25px;
   color: #FFF;
   text-decoration: none;
+    
+    
 }
 
 .blue
@@ -112,21 +115,22 @@ p {
 }
 
 .knoepfe {
-    text-align: center;   
+    text-align: center;  
     
-}
+    
 }
 #z1{
     margin-top: 20px;
 }
 
 #box1{
-	width: 50%;
+width: 50%;
     
         height: 150px;
-    	float:left;
+    float:left;
 }
 #box2{width: 50%;
         height: 150px;
-    	float:left;
+    float:left;
 }
+
