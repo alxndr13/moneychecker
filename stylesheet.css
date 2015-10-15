@@ -1,11 +1,11 @@
 body{
-background-image:url(hintergrund.png);
+background-image:url(hintergrund_15.png);
 background-attachment:scroll;
 }
 #transparent{
     height: 600px;
     width:100%;
-background-color: rgba(255, 255, 255, 0.6);
+/*background-color: rgba(255, 255, 255, 0.6);*/
 }
 #Logo{
 
