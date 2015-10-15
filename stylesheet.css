@@ -9,28 +9,32 @@ background-attachment:scroll;
 }
 #Logo{
 
-margin-left: 500px;
+margin-left: 600px;
     margin-top: 10px;
 }
 .auswahl1{
 height: auto;
 float:left;
     margin-top: 20px;
+    margin-left: 10px;
 }
 .textfeld1{
 margin-top: 20px;
 }
 .auswahl2{
-margin-left: 200px;
-    margin-top: -19px;
+    margin-top:20px;
+    float:left;
+    margin-left: 10px;
 }
 .ausgabe{
-margin-left: 275px;
-    margin-top: -33px;
+margin-top: 50px;
+    margin-left: -60px;
+    ;
+    float:left;
 }
 #ergebnis{
-margin-left: 80px;
-    margin-top: -33px;
+margin-left: 180px;
+    margin-top:-85px;
 }
 
 
@@ -38,5 +42,38 @@ button{
 height: 20px;
     border-radius: 3px;
     background-color:white;
+    margin-left: 425px;
+    
 }
-
+.boxgroesse {
+        width: 500px;
+        height: 150px;
+        font-size: 30pt;
+        color: white;
+        opacity: 0.5;
+        background-color: black
+    }
+ #box1 {
+        position: absolute;
+        top: 250px;
+        left: 200px;
+    }
+#box2 {
+        position: absolute;
+        top: 250px;
+        left: 705px;
+    }
+#box3 {
+        position: absolute;
+        top: 405px;
+        left: 200px;
+        width: 1005px;
+        height: 300px;
+    }
+#berechnen{
+    
+    margin-left: auto;
+}
+#loeschen{
+margin-left:auto;
+}
