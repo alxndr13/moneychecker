@@ -58,6 +58,7 @@ p {
     border-radius: 10px;
     border: 1px solid #000000;
     margin: 5px;
+    margin-top: 150px;
 }
 .animate {
   transition: all 0.1s;
@@ -113,4 +114,19 @@ p {
 .knoepfe {
     text-align: center;   
     
+}
+}
+#z1{
+    margin-top: 20px;
+}
+
+#box1{
+	width: 50%;
+    
+        height: 150px;
+    	float:left;
+}
+#box2{width: 50%;
+        height: 150px;
+    	float:left;
 }
