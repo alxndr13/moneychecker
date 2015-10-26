@@ -144,7 +144,7 @@ input {
 
 #svg_div {
     width: 100%;
-    min-width: 270px;
+    min-width: 200px;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;    
