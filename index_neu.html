@@ -40,41 +40,42 @@
                                 <option value="Rubel">Rubel</option>
                                 <option value="Yen">Yen</option>
                             </select>
-                           
+
                         </section>
-                         <input id="ergebnis" readonly="true" value="0">
+                        <input id="ergebnis" readonly="true" value="0">
                     </section>
                     </section>
-                    <section class="knoepfe"> <a href="#" class="action-button shadow animate green" onclick="calculate()">Berechnen</a>
+                    <section class="knoepfe"> <a href="#" class="action-button shadow animate green" onclick="calculate(); show('svg_div');">Berechnen</a>
                         <a href="#" class="action-button shadow animate green" onclick="clearall()">Löschen</a></section>
 
                     <br>
 
+                    <div id="svg_div" style="display: none">
+                        <svg width="40%" height="30%" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 450" style="background:transparent">
 
-                    <svg width="40%" height="30%" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 450" style="background:transparent">
+                            <defs>
+                                <linearGradient id="verlauf" x1="50%" y1="49%" x2="50%" y2="100%">
+                                    <stop offset="0%" stop-color="darkgreen" />
+                                    <stop offset="100%" stop-color="lightgreen" />
+                                </linearGradient>
+                            </defs>
 
-                        <defs>
-                            <linearGradient id="verlauf" x1="50%" y1="49%" x2="50%" y2="100%">
-                                <stop offset="0%" stop-color="darkgreen" />
-                                <stop offset="100%" stop-color="lightgreen" />
-                            </linearGradient>
-                        </defs>
+                            // Balkengraph eins bzw links.
+                            <rect id="rect1" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" transform="rotate(180, 140, 220)" /> // Balkengraph zwei bzw links.
+                            <rect id="rect2" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" transform="rotate(180, 270,220)" /> // linie
+                            <line x1="10" y1="440.5" x2="10" y2="5" stroke="black" stroke-width="1" /> // linie unten
+                            <line x1="10" y1="440" x2="620" y2="440" stroke="black" stroke-width="1" /> // linie
+                            <line x1="10" y1="220" x2="620" y2="220" stroke="black" stroke-width="1" /> // linie
 
-                        // Balkengraph eins bzw links.
-                        <rect id="rect1" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" transform="rotate(180, 140, 220)" /> // Balkengraph zwei bzw links.
-                        <rect id="rect2" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" transform="rotate(180, 270,220)" /> // linie
-                        <line x1="10" y1="440.5" x2="10" y2="5" stroke="black" stroke-width="1" /> // linie unten
-                        <line x1="10" y1="440" x2="620" y2="440" stroke="black" stroke-width="1" /> // linie
-                        <line x1="10" y1="220" x2="620" y2="220" stroke="black" stroke-width="1" /> // linie
+                            <line id="eins" x1="10" y1="110" x2="620" y2="110" stroke="black" stroke-width="1" /> // linie
+                            <line id="eins" x1="10" y1="330" x2="620" y2="330" stroke="black" stroke-width="1" /> // linie
+                            <line id="eins" x1="10" y1="275" x2="620" y2="275" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
+                            <line id="eins" x1="10" y1="165" x2="620" y2="165" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
+                            <line id="eins" x1="10" y1="55" x2="620" y2="55" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
+                            <line id="eins" x1="10" y1="385" x2="620" y2="385" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
 
-                        <line id="eins" x1="10" y1="110" x2="620" y2="110" stroke="black" stroke-width="1" /> // linie
-                        <line id="eins" x1="10" y1="330" x2="620" y2="330" stroke="black" stroke-width="1" /> // linie
-                        <line id="eins" x1="10" y1="275" x2="620" y2="275" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
-                        <line id="eins" x1="10" y1="165" x2="620" y2="165" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
-                        <line id="eins" x1="10" y1="55" x2="620" y2="55" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
-                        <line id="eins" x1="10" y1="385" x2="620" y2="385" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
-
-                    </svg>
+                        </svg>
+                    </div>
 
                 </div>
             </div>

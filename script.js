@@ -1,3 +1,10 @@
+function show(id) {
+    if (document.getElementById) {
+        var mydiv = document.getElementById(id);
+        mydiv.style.display = (mydiv.style.display == 'block' ? 'none' : 'block');
+    }
+}
+
 function calculate() {
     var z1 = document.getElementById("z1").value;
     var z2 = document.getElementById("z1").value;
