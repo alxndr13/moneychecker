@@ -46,7 +46,7 @@
                     </section>
                     </section>
                     <section class="knoepfe"> <a href="#" class="action-button shadow animate green" onclick="calculate(); show('svg_div');">Berechnen</a>
-                        <a href="#" class="action-button shadow animate green" onclick="clearall()">Löschen</a></section>
+                        <a href="#" class="action-button shadow animate green" onclick="clearall(); unshow('svg_div');">Löschen</a></section>
 
                     <br>
 
@@ -55,8 +55,8 @@
 
                             <defs>
                                 <linearGradient id="verlauf" x1="50%" y1="49%" x2="50%" y2="100%">
-                                    <stop offset="0%" stop-color="darkgreen" />
-                                    <stop offset="100%" stop-color="lightgreen" />
+                                    <stop offset="0%" stop-color="#7a876e" />
+                                    <stop offset="100%" stop-color="#848781" />
                                 </linearGradient>
                             </defs>
 

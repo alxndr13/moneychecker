@@ -1,7 +1,14 @@
 function show(id) {
     if (document.getElementById) {
         var mydiv = document.getElementById(id);
-        mydiv.style.display = (mydiv.style.display == 'block' ? 'none' : 'block');
+        mydiv.style.display = 'block';
+    }
+}
+
+function unshow(id) {
+    if (document.getElementById) {
+        var mydiv = document.getElementById(id);
+        mydiv.style.display = 'none';
     }
 }
 
