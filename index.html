@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+
+<!--***********************************************************************************************************
+    *********HEAD**********************************************************************************************
+    ********************************************************************************************************-->
+<!-- im Tab-Reiter steht 'Moneychecker' und das Logo ist zu sehen -->
 <head>
     <link rel="shortcut icon" href="icon.ico">
     <meta charset="utf-8">
@@ -8,40 +13,73 @@
     <title>Moneychecker</title>
 </head>
 
-<body onload="getIt();">
 
+<!--***********************************************************************************************************
+    *********BODY**********************************************************************************************
+    ********************************************************************************************************-->
+<body onload="getIt();">
+    
+    
+        <!--***************************************************************************************************
+        *********Slide-Left Menü*******************************************************************************
+        ****************************************************************************************************-->
     <div id="o-wrapper" class="o-wrapper">
 
         <div class="c-buttons" style="display: inline; float: left">
+            <!-- der Button, um das Slide-Left Menü zu öffnen, ist als Bild realisiert -->
             <button id="c-button--slide-left" class="c-button"><img src="Menu-Button.PNG" /> </button>
         </div>
 
         <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+            
+            <!-- Button, um das Slide-Left Menü wieder zu schließen -->
             <button class="c-menu__close">&larr; Close Menu</button>
+            
+            <!-- Inhalt des Slide-Left Meü ('Über uns'-Angaben), z.T. als Liste realisiert -->
             <ul class="c-menu__items">
                 <h1 style="color: white; text-align: center">Über uns</h1>
-                <p id="ueber">Diese Webanwendung ist ein Projekt der Macsi GmbH. Das Projekt "Moneychecker" ist im Rahmen eines Auftrags durch Dr. Dennis Pfisterer entstanden. Wir bedanken uns bei der RedBull GmbH aus Fuschl am See, Österreich für die tatkräftige Unterstützung unserer Gehirnzellen, während der Programmierung. Für etwaigen gewagten Programmierstil ist Marian Horst verantwortlich. Namentlich zu erwähnen sind:
-                    <ul id="liste">
-                        <li><b>M</b>arian Horst - SVG Designer</li>
-                        <li><b>A</b>lexander Huck - lebt im Terminal</li>
-                        <li><b>C</b>hristian Beck - Master of Div's</li>
-                        <li><b>S</b>abine Imanbaew - Mrs. Productivity</li>
-                        <li><b>I</b>nka Köcher - Göttin der CSS</li>
-                    </ul>
-                </p>
+                    <p id="ueber">Diese Webanwendung ist ein Projekt der Macsi GmbH. Das Projekt "Moneychecker" 
+                    ist im Rahmen eines Auftrags durch Dr. Dennis Pfisterer entstanden. Wir bedanken uns bei der 
+                    RedBull GmbH aus Fuschl am See, Österreich für die tatkräftige Unterstützung unserer 
+                    Gehirnzellen, während der Programmierung. Für etwaigen gewagten Programmierstil ist Marian 
+                    Horst verantwortlich. Namentlich zu erwähnen sind:
+                    
+                        <ul id="liste">
+                            <li><b>M</b>arian Horst - SVG Designer</li>
+                            <li><b>A</b>lexander Huck - lebt im Terminal</li>
+                            <li><b>C</b>hristian Beck - Master of Div's</li>
+                            <li><b>S</b>abine Imanbaew - Mrs. Productivity</li>
+                            <li><b>I</b>nka Köcher - Göttin der CSS</li>
+                        </ul>
+                    </p>
             </ul>
         </nav>
+        
+        
         <div id="c-mask" class="c-mask"></div>
+    
     </div>
+    
+        <!--***************************************************************************************************
+        *********Inhalt der Hauptseite (Währungsrechhner)******************************************************
+        ****************************************************************************************************-->
     <div id="wrapper">
+        
+         <!-- Logo -->
         <div id="headerwrap">
             <img src="moneychecker_logo_new.png" />
         </div>
+        
         <div id="contentliquid">
+            
             <div id="contentwrap">
+                
                 <div id="content">
+
+                    <!-- Definition des linken Bereichs (Auswahl der Startwährung und Textfeld zur Eingabe des Werts)  -->
                     <section id="box1">
                         <p>Startwährung:</p>
+                        
                         <section class="auswahl1">
                             <select id="w1" name="waehrung">
                                 <option value="Dollar">Dollar</option>
@@ -50,13 +88,20 @@
                                 <option value="Rubel">Rubel</option>
                                 <option value="Yen">Yen</option>
                             </select>
+                            
                             <section>
-                                <input id="z1" type="number" name="Eingabe in Textfeld" step="0.1" min="0.10" max="100" title="Geben Sie eine beliebige Zahl ein" placeholder="z.B. 1.77" autofocus>
+                                <input id="z1" type="number" name="Eingabe in Textfeld" step="0.1" min="0.10" 
+                                max="100" title="Geben Sie eine beliebige Zahl ein" placeholder="z.B. 1.77" autofocus>
                             </section>
                         </section>
+                        
                     </section>
+                    
+                    
+                    <!-- Definition des rechten Bereichs (Auswahl der Zielwährung und Textfeld zur Ausgabe des Werts)  -->
                     <section id="box2">
                         <p>Zielwährung:</p>
+                        
                         <section class="auswahl2">
                             <select id="w2" name="waehrung">
                                 <option value="Dollar">Dollar</option>
@@ -67,15 +112,25 @@
                             </select>
 
                         </section>
+                        
                         <input id="ergebnis" readonly="true" value="0">
                     </section>
+                    
+                    
+                   <!-- Buttons 'Berechnen' und 'Löschen'  -->
+                    <section class="knoepfe"> 
+                        <a href="#" class="action-button shadow animate green" onclick="calculate(); show('svg_div'); saveIt();">Berechnen</a>
+                        <a href="#" class="action-button shadow animate green" onclick="clearall(); unshow('svg_div'); clearIt();">Löschen</a>
                     </section>
-                    <section class="knoepfe"> <a href="#" class="action-button shadow animate green" onclick="calculate(); show('svg_div'); saveIt();">Berechnen</a>
-                        <a href="#" class="action-button shadow animate green" onclick="clearall(); unshow('svg_div'); clearIt();">Löschen</a></section>
 
                     <br>
-
+                    
+        <!--***************************************************************************************************
+        *********SVG-Balkendiagramm****************************************************************************
+        ****************************************************************************************************-->
+        
                     <div id="svg_div" style="display: none">
+                        
                         <svg width="40%" height="30%" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 500" style="background:transparent">
 
                             <defs>
@@ -104,16 +159,23 @@
                     </div>
 
                 </div>
+                
             </div>
+            
         </div>
+        
+        <!-- Macsi Copyright 2015  -->
         <div id="footerwrap">
             <div id="footer">
                 <p>Macsi &copy; 2015</p>
             </div>
         </div>
+        
     </div>
 
 </body>
+
+
 <script language="javascript" type="text/javascript" src="script.js"></script>
 
 </html>
