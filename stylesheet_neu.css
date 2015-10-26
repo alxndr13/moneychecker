@@ -276,3 +276,10 @@ body.has-active-menu {
 .c-menu--slide-left.is-active {
     transform: translateX(0);
 }
+
+#ueber {
+    color: white;
+    text-align: justify;
+    margin-left: 15px;
+    margin-right: 15px;
+}
