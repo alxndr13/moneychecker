@@ -144,9 +144,20 @@
                                 </linearGradient>
                             </defs>
 
-                            // Balkengraph eins bzw links.
-                            <rect id="rect1" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" transform="rotate(180, 140, 220)" /> // Balkengraph zwei bzw links.
-                            <rect id="rect2" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" transform="rotate(180, 270,220)" /> // linie
+                            <!-- Balkengraph 1 bzw. links  -->
+                            <rect id="rect1" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" 
+                            stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" 
+                            onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" 
+                            onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" 
+                            transform="rotate(180, 140, 220)" /> 
+                            
+                            <!-- Balkengraph 2 bzw. rechts  -->
+                            <rect id="rect2" x="0" y="0" width="180" height="220" stroke-width="1" fill="url(#verlauf)" 
+                            stroke="black" onmouseover="this.style.stroke = '#000000'; this.style['stroke-width'] = 3;" 
+                            onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 1;" 
+                            transform="rotate(180, 270,220)" /> 
+                            
+                            <!-- Linie  -->
                             <line x1="10" y1="440.5" x2="10" y2="5" stroke="black" stroke-width="1" /> // linie unten
                             <line x1="10" y1="440" x2="620" y2="440" stroke="black" stroke-width="1" /> // linie
                             <line x1="10" y1="220" x2="620" y2="220" stroke="black" stroke-width="1" /> // linie
@@ -157,6 +168,7 @@
                             <line id="eins" x1="10" y1="165" x2="620" y2="165" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
                             <line id="eins" x1="10" y1="55" x2="620" y2="55" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
                             <line id="eins" x1="10" y1="385" x2="620" y2="385" stroke="black" stroke-width="1" stroke-dasharray="1%, 1%" /> // linie
+                            
                             <text id="t1" x="140" y="500" font-family="Verdana" font-size="3em">Dollar</text>
                             <text id="t2" x="390" y="500" font-family="Verdana" font-size="3em">Euro</text>
                         </svg>
