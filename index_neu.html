@@ -8,7 +8,7 @@
     <title>Moneychecker</title>
 </head>
 
-<body>
+<body onload="getIt();">
 
     <div id="o-wrapper" class="o-wrapper">
 
@@ -20,7 +20,15 @@
             <button class="c-menu__close">&larr; Close Menu</button>
             <ul class="c-menu__items">
                 <h1 style="color: white; text-align: center">Über uns</h1>
-                <p id="ueber">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p id="ueber">Diese Webanwendung ist ein Projekt der Macsi GmbH. Das Projekt "Moneychecker" ist im Rahmen eines Auftrags durch Dr. Dennis Pfisterer entstanden. Wir bedanken uns bei der RedBull GmbH aus Fuschl am See, Österreich für die tatkräftige Unterstützung unserer Gehirnzellen, während der Programmierung. Für etwaigen gewagten Programmierstil ist Marian Horst verantwortlich. Namentlich zu erwähnen sind:
+                    <ul id="liste">
+                        <li>Marian Horst - seelischer Beistand</li>
+                        <li>Christian Beck - Master of Div's</li>
+                        <li>Sabine Imambaew - Mrs. Productivity</li>
+                        <li>Inka Köcher - Göttin der CSS</li>
+                        <li>Alexander Huck - lebt im Terminal</li>
+                    </ul>
+                </p>
             </ul>
         </nav>
 
@@ -68,8 +76,8 @@
                         <input id="ergebnis" readonly="true" value="0">
                     </section>
                     </section>
-                    <section class="knoepfe"> <a href="#" class="action-button shadow animate green" onclick="calculate(); show('svg_div');">Berechnen</a>
-                        <a href="#" class="action-button shadow animate green" onclick="clearall(); unshow('svg_div');">Löschen</a></section>
+                    <section class="knoepfe"> <a href="#" class="action-button shadow animate green" onclick="calculate(); show('svg_div'); saveIt();">Berechnen</a>
+                        <a href="#" class="action-button shadow animate green" onclick="clearall(); unshow('svg_div'); clearIt();">Löschen</a></section>
 
                     <br>
 

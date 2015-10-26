@@ -1,6 +1,63 @@
- /**
-     * SLIDE LEFT MENU
-     */
+function saveIt() {
+    //Eingegebene Zahl
+    var schluessel1 = 1;
+    var wert1 = document.getElementById("z1").value;
+    sessionStorage.setItem(schluessel1, wert1);
+    //Ergebnis
+    var schluessel2 = 2;
+    var wert2 = document.getElementById("ergebnis").value;
+    sessionStorage.setItem(schluessel2, wert2);
+    //Waehrung links
+    var schluessel3 = 3;
+    var waehrung1 = document.getElementById("w1").value;
+    sessionStorage.setItem(schluessel3, waehrung1);
+    //Waehrung rechts
+    var schluessel4 = 4;
+    var waehrung2 = document.getElementById("w2").value;
+    sessionStorage.setItem(schluessel4, waehrung2);
+
+}
+
+function getIt() {
+    //Werte laden
+    var wert1 = sessionStorage.getItem(1);
+    var wert2 = sessionStorage.getItem(2);
+    var waehrung1 = sessionStorage.getItem(3);
+    var waehrung2 = sessionStorage.getItem(4);
+
+    //Zahlenwerte
+    document.getElementById("z1").value = wert1;
+    document.getElementById("ergebnis").value = wert2;
+    if (waehrung1 != "" && waehrung2 != "") {
+        //Waehrungen
+        document.getElementById("w1").value = waehrung1;
+        document.getElementById("w2").value = waehrung2;
+    } else {
+        document.getElementById("w1").value = "Euro";
+        document.getElementById("w2").value = "Dollar";
+    }
+
+
+    if (document.getElementById("z1").value == "") {
+        unshow("svg_div");
+    } else {
+        calculate();
+        show("svg_div");
+    }
+
+}
+
+function clearIt() {
+    sessionStorage.clear();
+
+}
+
+
+
+
+/**
+ * SLIDE LEFT MENU
+ */
 
 (function (window) {
 
@@ -150,9 +207,13 @@ slideLeftBtn.addEventListener('click', function (e) {
 
 
 function show(id) {
-    if (document.getElementById) {
-        var mydiv = document.getElementById(id);
-        mydiv.style.display = 'block';
+    if (document.getElementById("z1").value == "") {
+
+    } else {
+        if (document.getElementById) {
+            var mydiv = document.getElementById(id);
+            mydiv.style.display = 'block';
+        }
     }
 }
 
@@ -405,4 +466,6 @@ function PfundInYen(wert) {
 function clearall() {
     document.getElementById("ergebnis").value = "";
     document.getElementById("z1").value = "";
+    document.getElementById("w1").value = "Euro";
+    document.getElementById("w2").value = "Dollar";
 }

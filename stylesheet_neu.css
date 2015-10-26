@@ -8,7 +8,9 @@ body {
     height: 100%;
 }
 
-p {}
+p {
+    font-size: 1em;
+}
 
 input {
     font-family: Arial, sans-serif;
@@ -282,4 +284,9 @@ body.has-active-menu {
     text-align: justify;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+#liste {
+    color: white;
+    text-align: left;
 }
