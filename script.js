@@ -379,7 +379,7 @@ function calculate() {
         document.getElementById("t1").innerHTML = "Pfund";
         document.getElementById("t2").innerHTML = "Dollar";
         document.getElementById("rect1").setAttribute("height", "220");
-        document.getElementById("rect2").setAttribute("height", "336,22");
+        document.getElementById("rect2").setAttribute("height", "336.22");
     }
     if (w1 == "Pfund" && w2 == "Euro") {
         PfundInEuro(z1);
@@ -405,104 +405,109 @@ function calculate() {
 
 }
 
+function Runden2Dezimal(x) {
+    Ergebnis = Math.round(x * 100) / 100;
+    return Ergebnis;
+}
+
 function DollarInEuro(wert) {
     erg = wert * 0.87921;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function DollarInPfund(wert) {
     erg = wert * 0.65422;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function DollarInRubel(wert) {
     erg = wert * 62.5713;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function DollarInYen(wert) {
     erg = wert * 119.82;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function EuroInDollar(wert) {
     erg = wert * 1.13724;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function EuroInRubel(wert) {
     erg = wert * 71.1586;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function EuroInYen(wert) {
     erg = wert * 136.27;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function EuroInPfund(wert) {
     erg = wert * 0.74404;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function RubelInDollar(wert) {
     erg = wert * 0.01596;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function RubelInEuro(wert) {
     erg = wert * 0.01403;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function RubelInYen(wert) {
     erg = wert * 1.91;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function RubelInPfund(wert) {
     erg = wert * 0.01044;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function YenInDollar(wert) {
     erg = wert * 0.00835;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function YenInEuro(wert) {
     erg = wert * 0.00734;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function YenInRubel(wert) {
     erg = wert * 0.52216;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function YenInPfund(wert) {
     erg = wert * 0.00546;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function PfundInDollar(wert) {
     erg = wert * 1.52829;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function PfundInEuro(wert) {
     erg = wert * 1.34367;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function PfundInRubel(wert) {
     erg = wert * 95.6271;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function PfundInYen(wert) {
     erg = wert * 183.12;
-    document.getElementById("ergebnis").value = erg;
+    document.getElementById("ergebnis").value = Runden2Dezimal(erg);
 }
 
 function clearall() {
