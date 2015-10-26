@@ -1,6 +1,0 @@
-HTML5 Grundgerüst (Formulare) - Christian
-Node.js - Alexander 			
-Connection Node.js - Alexander 
-Canvas für die Diagramme - Marian
-CSS fürs Design - Inka
-Extrafeatures - Sabine
