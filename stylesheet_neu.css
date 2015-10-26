@@ -51,9 +51,7 @@ p {}
 
 #footer {
     height: 10%;
-    background: #fffbfe;
-    border-radius: 1%;
-    border: 1px solid #000000;
+    text-align: center;
     margin: 5px;
     margin-top: 150px;
 }
@@ -118,9 +116,11 @@ p {}
     height: 150px;
     float: left;
 }
+
 #ergebnis {
     margin-top: 20px;
 }
+
 #box2 {
     width: 50%;
     height: 150px;
