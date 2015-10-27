@@ -8,7 +8,7 @@ Genutzte Technologien
 -------------
 - HTML
     - SVG
-    - Web Storrage (Session Storage)
+    - Web Storage (Session Storage)
 - JavaScript
 - CSS
 
