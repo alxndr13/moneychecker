@@ -28,7 +28,7 @@ function getIt() {
     //Zahlenwerte
     document.getElementById("z1").value = wert1;
     document.getElementById("ergebnis").value = wert2;
-    if (waehrung1 != "" && waehrung2 != "") {
+    if (waehrung1.length != 0 && waehrung2.length != 0) {
         //Waehrungen
         document.getElementById("w1").value = waehrung1;
         document.getElementById("w2").value = waehrung2;
