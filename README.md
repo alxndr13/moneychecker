@@ -7,6 +7,8 @@ Sinn der Webanwendung ist es, einem Besucher die Möglichkeit zur Umrechnung von
 Genutzte Technologien
 -------------
 - HTML
+    - SVG
+    - Web Storrage (Session Storage)
 - JavaScript
 - CSS
 

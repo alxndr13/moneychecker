@@ -285,8 +285,8 @@ function calculate() {
         EuroInRubel(z1);
         document.getElementById("t1").innerHTML = "Euro";
         document.getElementById("t2").innerHTML = "Rubel";
-        document.getElementById("rect1").setAttribute("height", "330");
-        document.getElementById("rect2").setAttribute("height", "4.64");
+        document.getElementById("rect1").setAttribute("height", "4.64");
+        document.getElementById("rect2").setAttribute("height", "330");
     }
     if (w1 == "Euro" && w2 == "Pfund") {
         EuroInPfund(z1);
