@@ -153,9 +153,7 @@ input {
 }
 
 
-/**
- * MENU OVERVIEW
- */
+/**MENU OVERVIEW*/
 
 .c-menu {
     position: fixed;
@@ -171,9 +169,7 @@ input {
 }
 
 
-/**
- * Close button resets.
- */
+/**Close Buttons*/
 
 .c-menu__close {
     color: #fff;
@@ -188,31 +184,17 @@ input {
     cursor: pointer;
 }
 
-
-/**
- * Close button resets.
- */
-
 .c-menu__close:focus {
     outline: none;
 }
 
-
-/**
- * Body states.
- *
- * When a menu is active, we want to hide the overflows on the body to prevent
- * awkward document scrolling.
- */
+/**Wenn Menü aktiv, den Overflow verbergen*/
 
 body.has-active-menu {
     overflow: hidden;
 }
 
-
-/**
- * Mask component
- */
+/**Mask Component*/
 
 .c-mask {
     position: fixed;
