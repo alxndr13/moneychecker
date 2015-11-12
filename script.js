@@ -54,18 +54,13 @@ function clearIt() {
 
 
 
-
-/**
- * SLIDE LEFT MENU
- */
+//Slidermenü links
 
 (function (window) {
 
     'use strict';
 
-    /**
-     * Extend Object helper function.
-     */
+    //Extend Hilfsfunction.
     function extend(a, b) {
         for (var key in b) {
             if (b.hasOwnProperty(key)) {
@@ -75,9 +70,7 @@ function clearIt() {
         return a;
     }
 
-    /**
-     * Each helper function.
-     */
+    //Each Hilfsfunktion
     function each(collection, callback) {
         for (var i = 0; i < collection.length; i++) {
             var item = collection[i];
@@ -85,28 +78,22 @@ function clearIt() {
         }
     }
 
-    /**
-     * Menu Constructor.
-     */
+   //Menü
     function Menu(options) {
         this.options = extend({}, this.options);
         extend(this.options, options);
         this._init();
     }
 
-    /**
-     * Menu Options.
-     */
+   //Menü Optionen
     Menu.prototype.options = {
-        wrapper: '#o-wrapper', // The content wrapper
-        type: 'slide-left', // The menu type
-        menuOpenerClass: '.c-button', // The menu opener class names (i.e. the buttons)
-        maskId: '#c-mask' // The ID of the mask
+        wrapper: '#o-wrapper', 
+        type: 'slide-left', 
+        menuOpenerClass: '.c-button', 
+        maskId: '#c-mask' 
     };
 
-    /**
-     * Initialise Menu.
-     */
+    //Menü initialisieren
     Menu.prototype._init = function () {
         this.body = document.body;
         this.wrapper = document.querySelector(this.options.wrapper);
@@ -117,26 +104,22 @@ function clearIt() {
         this._initEvents();
     };
 
-    /**
-     * Initialise Menu Events.
-     */
+    //Menü initialisieren (Events)
     Menu.prototype._initEvents = function () {
-        // Event for clicks on the close button inside the menu.
+        // Event für klicken auf den SChließenbutton im Menü
         this.closeBtn.addEventListener('click', function (e) {
             e.preventDefault();
             this.close();
         }.bind(this));
 
-        // Event for clicks on the mask.
+        // Event für klicken auf Maske
         this.mask.addEventListener('click', function (e) {
             e.preventDefault();
             this.close();
         }.bind(this));
     };
 
-    /**
-     * Open Menu.
-     */
+    //Menü öffnen
     Menu.prototype.open = function () {
         this.body.classList.add('has-active-menu');
         this.wrapper.classList.add('has-' + this.options.type);
@@ -145,9 +128,7 @@ function clearIt() {
         this.disableMenuOpeners();
     };
 
-    /**
-     * Close Menu.
-     */
+    // Menü schließen
     Menu.prototype.close = function () {
         this.body.classList.remove('has-active-menu');
         this.wrapper.classList.remove('has-' + this.options.type);
@@ -174,9 +155,7 @@ function clearIt() {
         });
     };
 
-    /**
-     * Add to global namespace.
-     */
+    //Menü hinzufügen
     window.Menu = Menu;
 
 })(window);
