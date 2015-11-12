@@ -87,7 +87,7 @@ function clearIt() {
 
    //Menü Optionen
     Menu.prototype.options = {
-        wrapper: '#o-wrapper', 
+        wrapper: '#slider-wrapper', 
         type: 'slide-left', 
         menuOpenerClass: '.c-button', 
         maskId: '#c-mask' 
@@ -123,8 +123,8 @@ function clearIt() {
     Menu.prototype.open = function () {
         this.body.classList.add('has-active-menu');
         this.wrapper.classList.add('has-' + this.options.type);
-        this.menu.classList.add('is-active');
-        this.mask.classList.add('is-active');
+        this.menu.classList.add('ist-activiert');
+        this.mask.classList.add('ist-activiert');
         this.disableMenuOpeners();
     };
 
@@ -132,8 +132,8 @@ function clearIt() {
     Menu.prototype.close = function () {
         this.body.classList.remove('has-active-menu');
         this.wrapper.classList.remove('has-' + this.options.type);
-        this.menu.classList.remove('is-active');
-        this.mask.classList.remove('is-active');
+        this.menu.classList.remove('ist-activiert');
+        this.mask.classList.remove('ist-activiert');
         this.enableMenuOpeners();
     };
 
@@ -168,7 +168,7 @@ function clearIt() {
 
 
 var slideLeft = new Menu({
-    wrapper: '#o-wrapper',
+    wrapper: '#slider-wrapper',
     type: 'slide-left',
     menuOpenerClass: '.c-button',
     maskId: '#c-mask'
